@@ -1,0 +1,22 @@
+{
+  "name": "site-localizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dropbox-paper-localizer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shogochiai/site-localizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shogochiai/site-localizer/issues"
+  },
+  "homepage": "https://github.com/shogochiai/site-localizer#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2"
+  }
+}
