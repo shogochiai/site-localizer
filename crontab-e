@@ -1,2 +1,3 @@
-* * * * * /usr/local/bin/wget https://paper.dropbox.com/doc/TODO-lGe56FetUpDiYOnINCeV9 -O /tmp/todo && /usr/local/bin/node /Users/sg/code/site-localizer/dropbox-paper-localizer.js
-* * * * * /usr/local/bin/wget https://ethresear.ch -O /tmp/ethresear.ch && /usr/local/bin/node /Users/sg/code/site-localizer/ethresearch-localizer.js
+MAILTO=''
+PATH=/usr/local/bin
+* * * * * casperjs /Users/sg/code/site-localizer/shot.js

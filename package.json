@@ -4,7 +4,8 @@
   "description": "",
   "main": "dropbox-paper-localizer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "shot": "casperjs shot.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/shogochiai/site-localizer#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2"
+    "axios": "^0.18.0",
+    "casperjs": "^1.1.4",
+    "cheerio": "^1.0.0-rc.2",
+    "global": "^4.3.2",
+    "phantomjs": "^2.1.7"
   }
 }

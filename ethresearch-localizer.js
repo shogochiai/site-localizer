@@ -1,6 +1,11 @@
 const cheerio = require('cheerio')
 const fs = require('fs')
-const LOCAL_FILE = "/tmp/ethresear.ch"
+var HOST = ''
+var LOCAL_FILE = ""
+
+HOST = 'https://ethresear.ch'
+LOCAL_FILE = "/tmp/ethresear.ch"
+const DEST_FILE = "/tmp/current.html"
 const html = fs.readFileSync(LOCAL_FILE)
 const $ = cheerio.load(html)
 
@@ -15,10 +20,10 @@ function replaceIfAbsoluteLink(i,el) {
     { type: 'src', item: el.attribs.src }
 
   if (srcObj.item && srcObj.item.indexOf('/') === 0) {
-    let replacedSrc = 'https://ethresear.ch'+srcObj.item
+    let replacedSrc = HOST+srcObj.item
     $(el).attr(srcObj.type, replacedSrc)
   }
 }
 
 let replacedHtml = $.html()
-fs.writeFileSync(LOCAL_FILE, replacedHtml)
+fs.writeFileSync(DEST_FILE, replacedHtml)
