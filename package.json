@@ -5,7 +5,7 @@
   "main": "dropbox-paper-localizer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "shot": "casperjs shot.js"
+    "shot": "casperjs shot.js && /usr/local/bin/convert /Users/sg/code/site-localizer/white.png /tmp/site.png -composite /tmp/site.png"
   },
   "repository": {
     "type": "git",

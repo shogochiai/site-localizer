@@ -1,7 +1,7 @@
 var casper = require('casper').create();
 
 const sites = [
-  "https://github.com/cryptoeconomicslab/plasma-chamber/issues",
+  "https://github.com/shogochiai",
   "http://ethresear.ch",
   "https://twitter.com/_sgtn/lists/sgtn"
 ]
@@ -19,6 +19,10 @@ casper.options.onResourceRequested = function(C, requestData, request) {
       requestData['url'].indexOf('https://assets-cdn.github.com/assets/framework') == 0
       ||
       requestData['url'].indexOf('https://assets-cdn.github.com/assets/site') == 0
+      ||
+      requestData['url'].indexOf('https://github.githubassets.com/assets/github') == 0
+      ||
+      requestData['url'].indexOf('https://github.githubassets.com/assets/framework') == 0
     )
   ) {
     console.log('Skipping CSS file: ' + requestData['url']);
@@ -35,7 +39,7 @@ if (rand == 0) {
   casper.thenOpen(sites[0], function() {
     casper.wait(5000, function(){
       this.echo(this.getTitle());
-      this.captureSelector('/tmp/site.png', '.issues-listing');
+      this.captureSelector('/tmp/site.png', '.contribution-activity-listing');
     })
   });
 } else if (rand == 1) {
