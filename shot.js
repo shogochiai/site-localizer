@@ -35,27 +35,27 @@ casper.then(function() {});
 
 
 var rand = Math.floor(Math.random()*sites.length)
-if (rand == 0) {
+// if (rand == 0) {
   casper.thenOpen(sites[0], function() {
     casper.wait(5000, function(){
       this.echo(this.getTitle());
-      this.captureSelector('/tmp/site.png', '.contribution-activity-listing');
+      this.captureSelector('/tmp/site1.png', '.contribution-activity-listing');
     })
   });
-} else if (rand == 1) {
+// } else if (rand == 1) {
   casper.thenOpen(sites[1], function() {
     casper.wait(2000, function(){
       this.echo(this.getTitle());
-      this.captureSelector('/tmp/site.png', '.topic-list.ember-view');
+      this.captureSelector('/tmp/site2.png', '.topic-list.ember-view');
     })
   });
-} else {
+// } else {
   casper.thenOpen(sites[2], function() {
     casper.wait(2000, function(){
       this.echo(this.getTitle());
-      this.captureSelector('/tmp/site.png', '.stream-container');
+      this.captureSelector('/tmp/site3.png', '.stream-container');
     })
   });
-}
+// }
 
 casper.run();
